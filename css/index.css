@@ -35,6 +35,7 @@ body{
 .header .logo img{
     height: 60px;
     width:auto;
+    object-fit: scale-down;
     filter: contrast(150%);
     transition: all .3s;
 }
