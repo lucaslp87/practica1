@@ -10,7 +10,7 @@ body{
     margin:0;
 }
 .header{
-    background-color: #666;
+    background: linear-gradient(to bottom, #666 40%, transparent);
     display:flex;
     justify-content: flex-end;
     align-items: center;
@@ -19,7 +19,13 @@ body{
     padding: 5px 10%;
     position: fixed;
     z-index: 10000;
+    transition:all 1s;
 }
+.header:hover{
+    background-color: #666;
+    transition: all 1s;
+}
+
 
 .header .logo{
     cursor: pointer;
@@ -29,7 +35,8 @@ body{
 .header .logo img{
     height: 60px;
     width:auto;
-    transition:all .3s;
+    filter: contrast(150%);
+    transition: all .3s;
 }
 
 .header .logo img:hover{
@@ -87,8 +94,6 @@ article{
     color: #ccce;
 }
 
-
-
 .bienvenida{
     display: flex;
     align-items: center; /* Centrado vertical */
@@ -114,7 +119,7 @@ article{
 }
 
 .bienvenida h1{
-    transform: scale(1.5);
+    letter-spacing: 1vw;
 }
 
 .bienvenida h1,
@@ -124,10 +129,10 @@ article{
     justify-content: center;
     padding: 10vh;
     margin-top:5vh;
+    transform: scale(1.5);
 }
 .bienvenida h2{
     margin-bottom: 10vh;
-    transform: scale(1.5);
     font-weight:normal;
 }
 .bienvenida img{
@@ -146,7 +151,34 @@ article{
 }
 
 .quienes-somos{
-    background-color: #0f0;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    background-image: linear-gradient(
+        to bottom,
+        #000e, #0008
+    ), url(../img/quienes\ somos.jpg);
+    background-attachment: fixed;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center center; 
+    background-repeat: no-repeat;
+}
+.quienes-somos section{
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+h2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10vh;
+    margin-top:-10vh;
+    transform: scale(2.5);
 }
 .actividades{
     background-color: #00f;
