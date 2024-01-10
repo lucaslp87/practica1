@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+
+*{
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+body{
+    background-color: #111111;
+    margin:0;
+}
+.header{
+    background-color: #666;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    width: 100vw;
+    padding: 5px 10%;
+    position: fixed;
+    z-index: 10000;
+}
+
+.header .logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.header .logo img{
+    height: 60px;
+    width:auto;
+    animation: brillar 10s alternate-reverse infinite;
+    transition:all .3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+    transition: all .1s;
+}
+
+.header .nav-links a{
+    font-size: 700;
+    color: #222;
+    text-decoration: none;
+    transition:all .3s;
+}
+
+.header .nav-links a:hover{
+    color: #f60;
+}
+
+.header .btn-contacto button{
+    font-weight:700;
+    color: #aaa;
+    padding: 9px 25px;
+    background-color: #222;
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-left: 20px;
+}
+
+.header .btn-contacto button:hover{
+    background-color: #000 ;
+    color: #f60;
+    transform: scale(1.1);
+}
+
+article{
+    display:flex;
+    justify-content: center center;
+    padding-top: 85px;
+    min-height: 100vh;
+    color: #ccce;
+}
+
+
+
+.bienvenida{
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    background-image: linear-gradient(
+        to bottom,
+        #000e, #0008
+    ), url(../img/oro\ gral.jpeg);
+    background-attachment: fixed;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center center; 
+    background-repeat: no-repeat;
+}
+
+.bienvenida section{
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bienvenida h1{
+    transform: scale(1.5);
+}
+
+.bienvenida h1,
+.bienvenida h2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10vh;
+    margin-top:5vh;
+}
+.bienvenida h2{
+    margin-bottom: 10vh;
+    transform: scale(1.5);
+    font-weight:normal;
+}
+.bienvenida img{
+    display: flex;
+    position: relative;
+    filter: invert(100%);
+    width:15vw;
+    height: auto;
+    margin: auto;
+    transition: all .3s;
+}
+
+.bienvenida img:hover{
+    transform: scale(1.05);
+    filter: invert(0.4) sepia(1) hue-rotate(1deg) saturate(1500%) brightness(80%) drop-shadow(3px 3px 1px #000);
+}
+
+.quienes-somos{
+    background-color: #0f0;
+}
+.actividades{
+    background-color: #00f;
+}
+.contacto{
+    background-color: #ff0;
+}
+footer{
+    background-color: #aaa;
+}
+
+@keyframes brillar {
+    0%{
+        filter: invert(0%);
+    }
+    50%{
+        filter: invert(100%)
+    }
+
+    100%{
+        filter: invert(0%);
+    }
+    
+}
