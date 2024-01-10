@@ -29,7 +29,6 @@ body{
 .header .logo img{
     height: 60px;
     width:auto;
-    animation: brillar 10s alternate-reverse infinite;
     transition:all .3s;
 }
 
