@@ -6,15 +6,22 @@
     font-size: 20px;
 }
 body{
+    display: flex;
+    flex-direction: column;
     background-color: #111111;
     margin:0;
+    overflow-x: hidden;
+    
+}
+p{
+    line-height: 4.5vh;
 }
 .header{
-    background: linear-gradient(to bottom, #666 40%, transparent);
+    background-color: #666;
     display:flex;
     justify-content: flex-end;
     align-items: center;
-    height: 85px;
+    height: 15vh;
     width: 100vw;
     padding: 5px 10%;
     position: fixed;
@@ -22,10 +29,8 @@ body{
     transition:all 1s;
 }
 .header:hover{
-    background-color: #666;
     transition: all 1s;
 }
-
 
 .header .logo{
     cursor: pointer;
@@ -88,9 +93,7 @@ body{
 }
 
 article{
-    display:flex;
-    justify-content: center center;
-    padding-top: 85px;
+    height: 85vh;   
     min-height: 100vh;
     color: #ccce;
 }
@@ -101,7 +104,7 @@ article{
     justify-content: center; /* Centrado horizontal */
     background-image: linear-gradient(
         to bottom,
-        #000e, #0008
+        #111e, #1118
     ), url(../img/oro\ gral.jpeg);
     background-attachment: fixed;
     object-fit: cover;
@@ -113,14 +116,10 @@ article{
 .bienvenida section{
     display: flex;
     flex-direction: column;
-    width: 100vh;
+    width: 100%;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.bienvenida h1{
-    letter-spacing: 1vw;
 }
 
 .bienvenida h1,
@@ -131,11 +130,16 @@ article{
     padding: 10vh;
     margin-top:5vh;
     transform: scale(1.5);
-}
-.bienvenida h2{
     margin-bottom: 10vh;
     font-weight:normal;
+    color: #bbb;
 }
+
+.bienvenida h1{
+    letter-spacing: 1vw;
+    margin-top:15vh;
+}
+
 .bienvenida img{
     display: flex;
     position: relative;
@@ -143,50 +147,201 @@ article{
     width:15vw;
     height: auto;
     margin: auto;
-    transition: all .3s;
-}
-
-.bienvenida img:hover{
-    transform: scale(1.05);
-    filter: invert(0.4) sepia(1) hue-rotate(1deg) saturate(1500%) brightness(80%) drop-shadow(3px 3px 1px #000);
+    filter: invert(0.4) sepia(1) hue-rotate(1deg) saturate(1500%) brightness(80%) drop-shadow(3px 3px 5px #000);    
 }
 
 .quienes-somos{
     display: flex;
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
+    align-items: center;
+    justify-content: center;
+    background-image:
+    linear-gradient(to right, #111e 35%, transparent ),
+    linear-gradient(to bottom,#111e, #1118), url(../img/quienes\ somos.jpg);
+    background-attachment: fixed;
+    object-fit: fill;
+    background-size: 80%;
+    background-position: right center; 
+    background-repeat: no-repeat;
+
+}
+.quienes-somos section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 40%;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+}
+.quienes-somos h2{
+    display: flex;
+    justify-content:center;
+    margin-right: 45%;
+    margin-bottom: 15%;
+    transform: scale(2.5);
+    color: #f60;
+}
+.quienes-somos p{
+    color: #bbb;
+}
+.quienes-somos p::first-line{
+    color: #f60;
+}
+.actividades{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.carruseles{
+    display: flex;
+    width: 300%;
+    height: 100%;
+}
+.slider-section{
+    width: calc(100%/3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#slide-act{
     background-image: linear-gradient(
         to bottom,
-        #000e, #0008
-    ), url(../img/quienes\ somos.jpg);
+        #111e, #1118
+    ), url(../img/actividades.jpg);
     background-attachment: fixed;
     object-fit: cover;
     background-size: cover;
     background-position: center center; 
     background-repeat: no-repeat;
 }
-.quienes-somos section{
-    display: flex;
-    flex-direction: column;
-    width: 100vh;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+#slide-musc{
+    background-image: linear-gradient(
+        to bottom,
+        #111e, #1118
+    ), url(../img/musculacion.jpg);
+    background-attachment: fixed;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center center; 
+    background-repeat: no-repeat;
 }
-h2{
+#slide-func{
+    background-image: linear-gradient(
+        to bottom,
+        #111e, #1118
+    ), url(../img/funcional.jpg);
+    background-attachment: fixed;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center center; 
+    background-repeat: no-repeat;
+}
+
+.actividades-texto {
+    position: absolute;
+    z-index: 100;
+    color: #bbb;
+    text-align: justify ;
+    padding: 25%;
+}
+.actividades-texto h2{
     display: flex;
-    width: 100%;
-    justify-content: center;
-    padding: 10vh;
-    margin-top:-10vh;
+    justify-content:center;
+    margin-bottom: 10%;
     transform: scale(2.5);
+    color: #f60;
 }
-.actividades{
-    background-color: #00f;
+
+.actividades-texto p::first-line{
+    color: #f60;
+}
+
+    
+.btn-left,
+.btn-right{
+    display: flex;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    font-size: 20vh;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    cursor:pointer;
+    color: #222;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+    animation: brillar 3s infinite alternate;
+}
+.btn-left:hover,
+.btn-right:hover{
+    filter:drop-shadow(3px 3px 10px #000);
+    color:#f60;
+    animation:none;
+}
+
+
+.btn-right{
+    right: 10vw;
+}
+.btn-left{
+    left: 10vw;
 }
 .contacto{
-    background-color: #ff0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:
+    linear-gradient(to right, #111e 35%, transparent ),
+    linear-gradient(to bottom,#111e, #1118), url(../img/quienes\ somos.jpg);
+    background-attachment: fixed;
+    object-fit: fill;
+    background-size: 80%;
+    background-position: right center; 
+    background-repeat: no-repeat;
 }
+.contacto section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 40%;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+}
+
+.contacto h2{
+    display: flex;
+    justify-content:center;
+    margin-right: 45%;
+    margin-bottom: 15%;
+    transform: scale(2.5);
+    color: #f60;
+}
+
+.contacto p{
+    color: #bbb;
+}
+.contacto p::first-line{
+    color: #f60;
+}
+.contacto form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center center;
+    color: #f60;
+}
+
+
 footer{
     background-color: #aaa;
 }
