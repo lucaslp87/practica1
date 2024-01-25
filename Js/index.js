@@ -10,6 +10,35 @@ let operacion=0;
 let counter =0;
 let widthImg= 100/sliderSection.length;
 
+document.addEventListener("DOMContentLoaded",function() {
+    let navLinks = document.querySelectorAll(".nav-links a");
+    let buttonContacto= document.querySelector(".btn-contacto");
+
+    buttonContacto.addEventListener("click", ()=> {
+        let hrefContacto = buttonContacto.getAttribute('href').substring(1);
+
+        let contactoClass = document.querySelector(`.${hrefContacto}`);
+
+        if(contactoClass){
+            contactoClass.scrollIntoView({behavior: 'smooth'});
+        }
+
+    })
+    navLinks.forEach(link => {
+        link.addEventListener("click" , (event) => {
+            event.preventDefault();
+
+            let targetClass = link.getAttribute('href').substring(1);
+
+            let targetSection = document.querySelector(`.${targetClass}`);
+
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});
+
 function moveToRight(){
     if(counter>=sliderSection.length-1){
         counter=0;

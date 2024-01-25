@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 *{
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
     font-size: 3.5vh;
 }
@@ -68,7 +68,7 @@ button{
     margin-right: auto;
 }
 
-.header .logo img{
+.header .logo Img{
     height: 10vh;
     width:auto;
     object-fit: scale-down;
@@ -76,7 +76,7 @@ button{
     transition: transform .3s;
 }
 
-.header .logo img:hover{
+.header .logo Img:hover{
     transform: scale(1.2);
 }
 
@@ -95,7 +95,7 @@ button{
 }
 
 .header .nav-links a{
-    font-size: 700;
+    font-weight: 400;
     color:var(--color-fondo);
     text-decoration: none;
     transition:all .3s;
@@ -130,19 +130,11 @@ section{
     text-align:center;
 }
 
-.bienvenida section{    
-    background-image: linear-gradient(to bottom,#111e, #1118), url(../img/oro\ gral.jpeg);
-    background-attachment: fixed;
-    object-fit: cover;
-    background-size: cover;
-    background-position: center center;
-}
-
 .bienvenida section h1{
     display: none;
 }
 
-.bienvenida img{
+.bienvenida Img{
     margin-top:20vh;
     margin-bottom: 10vh;
     width: 35vw;
@@ -152,7 +144,7 @@ section{
 
 .quienes-somos{
     background-image:
-    linear-gradient(to right, #111e 15%, #1114 60%, #111e 100%), linear-gradient(to bottom,#111e, #1118), url(../img/quienes\ somos.jpg);
+    linear-gradient(to right, #111e 15%, #1114 60%, #111e 100%), linear-gradient(to bottom,#111e, #1118), url(../Img/quienes\ somos.jpg);
     background-attachment: fixed;
     object-fit: fill;
     background-size: cover;
@@ -190,19 +182,19 @@ section{
     background-image: linear-gradient(
         to bottom,
         #111e, #1118
-    ), url(../img/actividades.jpg);
+    ), url(../Img/actividades.jpg);
 }
 .musc{
     background-image: linear-gradient(
         to bottom,
         #111e, #1118
-    ), url(../img/musculacion.jpg);
+    ), url(../Img/musculacion.jpg);
 }
 .func{
     background-image: linear-gradient(
         to bottom,
         #111e, #1118
-    ), url(../img/funcional.jpg);
+    ), url(../Img/funcional.jpg);
 }
 
 .btn-left,
@@ -234,10 +226,28 @@ section{
     left: 10vw;
 }
 
+.ubicacion{
+    background-image:
+    linear-gradient(to left, transparent 50%,  #000f ),
+    linear-gradient(to bottom,#111e, #1118), url(../Img/ubicacion.png);
+    background-attachment: fixed;
+    background-size: 110%;
+    background-position: right bottom; 
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.ubicacion button:hover{
+        background-color: var(--color-fondo) ;
+        color: var(--color-naranja);
+        transform: scale(1.1);
+}
+
+
 .contacto{
     background-image:
     linear-gradient(to left, #111f 35%, transparent ),
-    linear-gradient(to bottom,#111e, #1118), url(../img/contacto.jpg);
+    linear-gradient(to bottom,#111e, #1118), url(../Img/contacto.jpg);
     background-attachment: fixed;
     object-fit: fill;
     background-size: 100%;
@@ -339,6 +349,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
     color: var(--color-letras);
     padding:30px;
     padding-left:5vw;
@@ -347,7 +358,7 @@ footer{
 }
 
 footer p{
-    font-size: small;
+    font-size: x-small;
     margin-right: auto;
 }
 
@@ -359,6 +370,7 @@ footer .btn-admins button{
     transform: scale(.6);
     background-color: var(--color-letras);
     color: var(--color-fondo);
+    margin: auto;
 }
 
 footer .btn-admins button:hover{
