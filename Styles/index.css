@@ -129,6 +129,15 @@ section{
     margin-right: 20vw;
     text-align:center;
 }
+.bienvenida {
+    height: 100vh;
+    transition: height 0.5s ease-in-out;
+}
+
+.bienvenida.oculto {
+    height: 0;
+    overflow: hidden;
+}
 
 .bienvenida section h1{
     display: none;
@@ -159,42 +168,84 @@ section{
 }
 .carruseles{
     display: flex;
-    width: 300%;
+    width: 900%;
     height: 100%;
 }
 
 .slider-section{
-    width: calc(100%/3);
+    width: calc(100%/9);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     position: relative;
-    background-attachment: fixed;
     object-fit: cover;
     background-size: cover;
     background-position: center center; 
     background-repeat: no-repeat;
 }
 
-.act{
+.general{
     background-image: linear-gradient(
         to bottom,
         #111e, #1118
     ), url(../Img/actividades.jpg);
 }
-.musc{
+.musculacion{
     background-image: linear-gradient(
         to bottom,
         #111e, #1118
     ), url(../Img/musculacion.jpg);
 }
-.func{
+.funcional{
     background-image: linear-gradient(
         to bottom,
         #111e, #1118
     ), url(../Img/funcional.jpg);
+}
+
+.pilates{
+    background-image: linear-gradient(
+        to bottom,
+        #111e, #1118
+    ), url(../Img/pilates\ gral.jpeg);
+}
+
+.boxeo{
+    background-image: linear-gradient(
+        to bottom,
+        #111e, #1118
+    ), url(../Img/boxeo.jpg);
+}
+
+.indoor{
+    background-image: linear-gradient(
+        to bottom,
+        #111e, #1118
+    ), url(../Img/indoor\ gral.jpeg);
+}
+
+.strong{
+    background-image: linear-gradient(
+        to bottom,
+        #111e, #1118
+    ), url(../Img/strong.jpeg);
+    background-position-y: 65%;
+}
+
+.kinesiologia{
+    background-image: linear-gradient(
+        to bottom,
+        #111e, #1118
+    ), url(../Img/Kinesiologia.jpg);
+}
+
+.antropometria{
+    background-image: linear-gradient(
+        to bottom,
+        #111e, #1118
+    ), url(../Img/Antropometria.jpg);
 }
 
 .btn-left,

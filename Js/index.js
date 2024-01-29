@@ -1,16 +1,28 @@
-let btnLeft = document.querySelector(".btn-left");
-let btnRight = document.querySelector(".btn-right");
-let slider = document.querySelector("#slider");
-let sliderSection=document.querySelectorAll(".slider-section");
+let btnLeft = document.querySelector(".btn-left"),
+    btnRight = document.querySelector(".btn-right"),
+    slider = document.querySelector("#slider"),
+    sliderSection=document.querySelectorAll(".slider-section"),
+    btnUbicacion=document.querySelector(".btn-ubicacion"),
+    articleBienvenida=document.querySelector(".bienvenida");
 
-btnLeft.addEventListener("click", ()=> moveToLeft());
-btnRight.addEventListener("click", ()=> moveToRight());
+document.addEventListener("DOMContentLoaded", scrolleo);
+btnLeft.addEventListener("click", moveToLeft);
+btnRight.addEventListener("click", moveToRight);
+btnUbicacion.addEventListener("click", ()=>{
+    window.open("https://maps.app.goo.gl/shjhoQg7nBvBED7EA");   
+})
+
+setTimeout(()=>{
+    articleBienvenida.classList.add("oculto");
+
+}, "3000"); 
 
 let operacion=0;
 let counter =0;
 let widthImg= 100/sliderSection.length;
 
-document.addEventListener("DOMContentLoaded",function() {
+
+function scrolleo(){
     let navLinks = document.querySelectorAll(".nav-links a");
     let buttonContacto= document.querySelector(".btn-contacto");
 
@@ -37,7 +49,7 @@ document.addEventListener("DOMContentLoaded",function() {
             }
         });
     });
-});
+};
 
 function moveToRight(){
     if(counter>=sliderSection.length-1){
